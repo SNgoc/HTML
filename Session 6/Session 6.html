@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 6</title>
+    <style>
+        /* định dạng paragraph */
+        p{ 
+            word-spacing: 20px; /*khoảng cách chữ*/
+            font-family: 'Times New Roman', Times, serif; /*kiểu phông*/
+            font-size: 30px;
+            font-style: italic;
+            font-weight: bold;
+            color: blue;
+            /* text-align: center; /*căn vb */
+            text-decoration:brown;/*màu dòng gạch*/
+            text-decoration-line: overline;/*gạch trên*/
+            text-indent: 50px; /*thụt lề*/
+            text-transform: uppercase; /*viết hoa tất cả chữ*/
+        }
+        span{/*tinh chỉnh 1 chữ trong paragraph*/
+            color: chartreuse;
+            border: solid;
+            display: inline-block; /*có 4 dạng: none, inline, block*/
+        }
+        .div1{
+            border: solid;
+            padding: 80px;/*top-bottom-right-left:40*/
+            color: chocolate;
+        }
+        .div2{
+            border: solid;
+            padding: 20px 40px;/*top-bottom:20; right-left:40*/
+            color: darkgreen;
+        }
+        .div3{
+            border: solid;
+            padding: 20px 40px 60px;/*top:20; right-left:40; bottom:60*/
+            color: darkviolet;
+        }
+        .div4{
+            border: solid;
+            padding: 20px 40px 60px 80px;/*top:20; right:40; bottom:60; left:80*/
+            color: tomato;
+        }
+        .div5{
+            border: solid;
+            margin: 80px;/*canh khoảng cách giữa các div text*/
+        }
+        .div6{
+            border: solid;
+            width: 300px;/*chỉnh khung*/
+            text-align: center;/*căn lề vb*/
+            margin: 40px 60px;
+        }
+        .div7{
+            border-style: dashed;/*chỉnh đường viền quanh khung*/
+            border-color: brown;
+            border-width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a paragraph</p>
+    <p>I love <span>Programming</span> so much</p>
+    <div class="div1"> <h2>Padding with 1 argument <br></h2>
+        This is an another paragraph This is an another paragraph This is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraph
+    </div>
+    <div class="div2">
+        <h2>Padding with 2 argument <br></h2>
+        This is an another paragraph This is an another paragraph This is an another paragraphThis is an
+        another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraphThis
+        is an another paragraph
+        This is an another paragraphThis is an another paragraph
+    </div>
+    <div class="div3"><h2>Padding with 3 argument <br></h2>
+        This is an another paragraph This is an another paragraph This is an another paragraphThis is an
+        another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraphThis
+        is an another paragraph
+        This is an another paragraphThis is an another paragraph
+    </div>
+    <div class="div4"><h2>Padding with 4 argument <br></h2>
+        This is an another paragraph This is an another paragraph This is an another paragraphThis is an
+        another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraphThis
+        is an another paragraph
+        This is an another paragraphThis is an another paragraph
+    </div>
+    <div class="div5"><h2>Margin with 1 argument <br></h2>
+        This is an another paragraph This is an another paragraph This is an another paragraphThis is an
+        another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraphThis
+        is an another paragraph
+        This is an another paragraphThis is an another paragraph
+    </div>
+    <div class="div6">
+        <h2>Margin with 1 argument <br></h2>
+        This is an another paragraph This is an another paragraph This is an another paragraphThis is an
+        another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraphThis
+        is an another paragraph
+        This is an another paragraphThis is an another paragraph
+    </div>
+    <div class="div7">
+        <h2>Chỉnh khung viền <br></h2>
+        This is an another paragraph This is an another paragraph This is an another paragraphThis is an
+        another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraph
+        This is an another paragraphThis is an another paragraphThis is an another paragraphThis is an another paragraphThis
+        is an another paragraph
+        This is an another paragraphThis is an another paragraph
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 5</title>
+    <style>
+        /* type selector (type<id)*/
+        #para /*tạo kieu id*/
+        {
+            background-color: rgb(255, 47, 220);
+            color: rgb(34, 0, 128);
+        }
+        /* type < class < id */
+        .myclass/*kieu class*/
+        {
+            color: rgb(0, 250, 75);
+        }
+        /* Selector */
+        *
+        /*kieu back ground*/
+        {
+            background-color: rgba(104, 171, 182, 0.932);
+        }
+        /*Chỉnh trạng thái link*/
+        a:link
+        {
+            color: rgb(14, 64, 201);
+        }
+        a:active
+        {
+            color: red;
+        }
+        a:visited /*trạng thái đã vào rồi*/
+        {
+            color: rgb(205, 90, 186);
+        }
+        a:hover
+        {
+            color: rgb(255, 154, 71);
+        }
+        #myid::first-letter
+        {
+            color: seagreen;
+        }
+        #div1::first-line /*tô dòng đầu*/
+        {
+            color: brown;
+        }
+        div:first-child /*dùng thẻ, không cần dùng id */
+        {
+            color: chartreuse;
+        }
+        #div2::before {/*chèn text vào trước div*/
+            content: "Insert before";
+            background-color: darkorange;
+        }
+        #div2::after {/*chèn text vào sau div*/
+            content: "Insert after";
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <p style="font-size:1em; color: rgb(255, 0, 128);">Font size use 1em</p>
+    <p style="font-size:2em" id = "para" >Font size use 2em</p>
+    <p style="font-size:1ex" class = "myclass">Font size use 1ex</p>
+    <p style="font-size:16px" id = "para" class = "myclass">Font size use px</p>
+    <h1>Font size use h1</h1>
+    <h1 style="font: size 150%;">Font size use %</h1>
+    
+    <a href="https://vnexpress.net/">VnExpress</a>
+    <h2>First Letter</h2>
+    <p id = "myid">This is paragraph</p>
+
+    <h2>First Line</h2>
+    <div id = "div1">
+        First line <br>
+        Second line <br>
+        Third line <br>
+    </div>
+
+    <h2>First Child</h2>
+    <div id = "div2">
+        <div>First child</div> <br>
+        <div>Second child</div> <br>
+        <div>Third child</div> <br>
+    </div>
+    
+</body>
+</html>
