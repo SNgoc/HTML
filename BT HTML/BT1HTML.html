@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập</title>
+    <style>
+        /*Create a Scroll To Top Button */
+          #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: rgb(0, 255, 0);
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }/*End style button*/
+
+        .div1{
+            color: rgb(0, 47, 255);
+            text-align: center;
+        }
+        .div2{
+            background-color: crimson;
+        }
+        .div3{
+            background-color: rgb(194, 148, 20);
+            color: rgb(252, 251, 250);
+            background-image: url(/Pictures/Fantasy/cliffs_destruction_city_landscape_waterfall_69033_1920x1080.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a Scroll To Top Button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- End code-->
+    
+    <ul>
+        <p style="font-size: 30px;color: crimson;">List Bài tập HTML5</p>
+        <!-- link con trỏ đến 1 section -->
+        <li><a href="#bt1">
+                <button type="button" style="color: blue;font-size: 20px;">Bài tập 1</button>
+            </a></li>
+        <li><a href="#bt2">
+                <button type="button" style="color: blue;font-size: 20px;">Bài tập 2</button>
+            </a></li>
+        <li><a href="#bt3">
+                <button type="button" style="color: blue;font-size: 20px;">Bài tập 3</button>
+            </a></li>
+        <li><a href="#bt4">
+                <button type="button" style="color: blue;font-size: 20px;">Bài tập 4</button>
+            </a></li>
+    </ul>
+    <h2 id="bt1">Bài tập 1</h2>
+    <div class="div1">Lập trình web <br>
+        Chào mừng các bạn đến với ngôn ngữ HTML
+    </div>
+    <h2 id="bt2">Bài tập 2</h2>
+    <h3 class="div1" style="background-color: darkseagreen;">Paragraph</h3>
+    <div class="div1" style="background-color: rgb(158, 177, 89);">
+        <p style="color: rgb(185, 44, 19);">
+            This is a paragraph This is a paragraph 1 <br>
+            This is a paragraph This is a paragraph 2 <br>
+            This is a paragraph This is a paragraph 3 <br>
+            This is a paragraph This is a paragraph 4 <br>
+            This is a paragraph This is a paragraph 5 <br>
+        <hr width="200px">
+        <p style="color: rgb(22, 19, 185);">
+            This is a paragraph This is a paragraph 6 <br>
+            This is a paragraph This is a paragraph 7 <br>
+            This is a paragraph This is a paragraph 8 <br>
+            This is a paragraph This is a paragraph 9 <br>
+            This is a paragraph This is a paragraph 10 <br>
+        </p>
+        <hr width="200px">
+        <p style="color: rgb(134, 9, 15);">
+            This is a paragraph This is a paragraph 11 <br>
+            This is a paragraph This is a paragraph 12 <br>
+            This is a paragraph This is a paragraph 13 <br>
+            This is a paragraph This is a paragraph 14 <br>
+            This is a paragraph This is a paragraph 15 <br>
+    </div>
+    <h2 id="bt3">Bài tập 3</h2>
+    <div class="div3" style="text-align:left;">
+            <p style="font-size: 30px;text-align: center;color: rgb(235, 193, 10);">Castle Art</p>
+            This is a text and paragraphThis is a text and paragraphThis is a text and paragraphThis is a text and paragraph
+            This is a text and paragraphThis is a text and paragraphThis is a text and paragraph <br> This is a text and paragraphThis is a text and paragraph
+            This is a text and paragraphThis is a text and paragraphThis is a text and paragraph
+            This is a text and paragraphThis is a text and paragraphThis is a text and paragraphThis is a text and paragraphThis is a text and paragraph
+            This is a text and paragraphThis is a text and paragraphThis is a text <br> and paragraphThis is a text and paragraph
+            This is a text and paragraphThis is a text and paragraphThis is a text and paragraph
+            This is a text and paragraphThis is a text and paragraph
+            This is a text and paragraphThis is a text and paragraph <br> This is a text and paragraphThis is a text and paragraphThis is a text and paragraph
+            This is a text and paragraphThis is a text and paragraph
+    </div>
+    <h2 id="bt4">Bài tập 4</h2>
+    <div style="background-image: url(../Pictures/Art/alone_art_field.jpg);background-size:auto; background-repeat: no-repeat;">
+        <p style="text-align: center;font-size: 30px;color: rgb(25, 180, 128);">Lâu đài gỗ ở Pattaya</p>
+        <p style="border:solid; background-color: rgb(35, 180, 185);color: aliceblue;
+        font-weight: bold; font-style: italic;">
+        Lâu đài Sự Thật bằng gỗ nằm bên bờ biển ở Pattaya, Thái Lan có nhiều tượng điêu khắc tuyệt mỹ. Tất cả chỉ dùng mộng ghép, không dùng đinh để kết nối.</p>
+        <p style="color:  rgb(25, 180, 128);">Nếu như có quá nhiều người biết đến một Pattaya đầy phồn hoa náo nhiệt, là trung tâm giải trí vui chơi bậc nhất Thái
+        Lan, ít ai biết nơi đây tồn tại một tòa lâu đài khổng lồ bằng gỗ nằm bên bờ biển.</p>
+        <p style="color:  rgb(25, 180, 128);">Lâu đài Sự Thật - là một kiệt tác của nghệ thuật điêu khắc gỗ Thái Lan.Được khởi công xây dựng từ năm 1981 với ý tưởng và sự tài trợ chính của tỷ phú Thái Lan - ông Lek Viriyaphan, 
+        cho đến năm 2008 lâu đài mới xây xong phần lớn chứ vẫn chưa hoàn thiện. Các nghệ nhân điêu khắc chia sẻ, lâu đài cứ được mở rộng
+        mãi và chưa có kế hoạch dừng lại.</p>
+    </div>
+</body>
+</html>
