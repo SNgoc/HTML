@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài tập</title>
+    <title>Bài tập HTML5 practice from 1-5</title>
+    <link rel="stylesheet" href="BT.css">
     <style>
         /*Create a Scroll To Top Button */
           #myBtn {
@@ -39,7 +40,7 @@
             background-image: url(/Pictures/Fantasy/cliffs_destruction_city_landscape_waterfall_69033_1920x1080.jpg);
             background-position: center;
             background-repeat: no-repeat;
-            background-size: 500px;
+            background-size: 300px;
         }
     </style>
 </head>
@@ -84,11 +85,16 @@
         <li><a href="#bt4">
                 <button type="button" style="color: blue;font-size: 20px;">Bài tập 4</button>
             </a></li>
+        <li><a href="#bt5">
+                <button type="button" style="color: blue;font-size: 20px;">Bài tập 5</button>
+            </a></li>
     </ul>
+
     <h2 id="bt1">Bài tập 1</h2>
-    <div class="div1">Lập trình web <br>
+    <div class="div1" style="font-size: 20px;">Lập trình web <br>
         Chào mừng các bạn đến với ngôn ngữ HTML
     </div>
+
     <h2 id="bt2">Bài tập 2</h2>
     <h3 class="div1" style="background-color: darkseagreen;">Paragraph</h3>
     <div class="div1" style="background-color: rgb(158, 177, 89);">
@@ -114,6 +120,7 @@
             This is a paragraph This is a paragraph 14 <br>
             This is a paragraph This is a paragraph 15 <br>
     </div>
+
     <h2 id="bt3">Bài tập 3</h2>
     <div class="div3" style="text-align:left;">
             <p style="font-size: 30px;text-align: center;color: rgb(235, 193, 10);">Castle Art</p>
@@ -127,6 +134,7 @@
             This is a text and paragraphThis is a text and paragraph <br> This is a text and paragraphThis is a text and paragraphThis is a text and paragraph
             This is a text and paragraphThis is a text and paragraph
     </div>
+
     <h2 id="bt4">Bài tập 4</h2>
     <div style="background-image: url(../Pictures/Art/alone_art_field.jpg);background-size:auto; background-repeat: no-repeat;">
         <p style="text-align: center;font-size: 30px;color: rgb(25, 180, 128);">Lâu đài gỗ ở Pattaya</p>
@@ -139,5 +147,27 @@
         cho đến năm 2008 lâu đài mới xây xong phần lớn chứ vẫn chưa hoàn thiện. Các nghệ nhân điêu khắc chia sẻ, lâu đài cứ được mở rộng
         mãi và chưa có kế hoạch dừng lại.</p>
     </div>
+
+    <h2 id="bt5">Bài tập 5</h2>
+    <div>
+        <!-- Dùng font để format 1 dòng, câu, từ bất kỳ -->
+        <p style="text-align: center;color: rgb(6, 95, 28);font-size: 30px;font-weight: 1000;">Toán-Hóa-Tin</p>
+        <p style="text-align: justify;color:white;font-size: 20px;">
+            <b><u>Toán học:</u></b> <i>Phương trình bậc 2:</i>
+            <font style="color: red;">ax<sup>2</sup> + bx + c = 0</font><br>
+            <b><u>Hóa học:</u></b> Nước: <font style="color: red;">H<sub>2</sub>O;</font>
+            <i>Axit Sunfuric:</i>
+            <font style="color: red;">H<sub>2</sub>SO<sub>4</sub></font> <br>
+            <b><u>Tin học:</u></b> <i>Vòng lặp for:</i> <br>
+            <pre style="background-color: lightyellow;color: mediumblue;text-align: justify;font-size: 15px;">
+                    For i = 0 To 10
+                        Tong = Tong + 1
+                                
+                    Next
+            </pre>
+        </p> 
+    </div>
+    <!-- Text box search -->
+    <input type="text" style="width: 300px;"><button type="submit">Search</button>
 </body>
 </html>

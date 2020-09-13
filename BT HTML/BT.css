@@ -1,0 +1,8 @@
+body{
+    /* khi chèn link ảnh từ website với url phải có '' */
+    background-image: url('https://media.giphy.com/media/3ohhww4ATzb88rvbj2/giphy.gif');
+    background-size: auto;
+
+    height: 100%;
+    width: 100%;
+}
