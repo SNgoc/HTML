@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 7</title>
+    <style>
+        .f1{ /*căn chỉnh img*/
+            float: left;
+        }
+        .f2{ /*căn chỉnh img*/
+            float: right;
+        }
+        /*chuyen dong hinh*/
+        .transition{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: linear; /*ease*/
+            transition-delay: 0s;
+        }
+        .transition:hover{
+            width: 500px;
+            height: 500px;
+        }
+        /**/
+        /*Animation; có 7 thuộc tính*/
+        .animation{
+            width: 300px;
+            height: 300px;
+            background-color: chartreuse;
+            animation-name: Myanimated;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-play-state: running;
+            position: relative;
+        }
+        /*code chạy animate*/
+        /*@keyframes Myanimated{
+            from {left: 0px;}
+            to { left: 500px;}
+        }*/
+        @keyframes Myanimated{
+            0% {top: 0px; left: 0px;}
+            25% {top: 0px; left: 300px;}
+            50% {top: 300px; left: 300px;}
+            75% {top:300px; left: 0px;}
+            100% {top: 0px; left: 0px;}
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img class="f1" src="https://images.wallpaperscraft.com/image/surfing_board_aerial_view_185127_1920x1080.jpg" alt="Boat on Lake" width="30%" height="30%">
+        This is a paragraph This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraph This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+    </div>
+    <br> <br>
+    <div>
+        <img class="f2" src="https://images.wallpaperscraft.com/image/surfing_board_aerial_view_185127_1920x1080.jpg" alt="Boat on Lake"
+            width="30%" height="30%">
+        This is a paragraph This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a
+        paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a
+        paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a
+        paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a
+        paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a
+        paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a
+        paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a
+        paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a
+        paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+        This is a paragraph This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a
+        paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a
+        paragraphThis is a paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a
+        paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a
+        paragraphThis is a paragraph
+        This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph
+    </div>
+
+    <!-- Nhóm các hình ảnh lại với nhau -->
+    <h2>Figurecaption</h2>
+    <figure style="text-align: center;">
+        <img src="../First HTML/1.jpg" alt="1" width="296" height="200">
+        <img src="../First HTML/2.jpg" alt="2" width="296" height="200">
+        <img src="../First HTML/3.jpg" alt="3" width="296" height="200">
+        <img src="../First HTML/4.jpg" alt="4" width="296" height="200">
+        <img src="../First HTML/5.jpg" alt="5" width="296" height="200">
+        <figcaption style="text-align: center;font-size: 30px;">Đặt tên tiêu đề cho nhóm ảnh</figcaption>
+    </figure>
+    <!-- Chuyển đổi từ img nhỏ sang img lớn -->
+    <h2>Thumbnail</h2>
+    <a href="../Pictures/Art/alone_art_field.jpg">
+        <img src="../Pictures/Art/alone_art_field(small).jpg" alt="Art">
+    </a>
+
+    <!-- Hiệu ứng chuyển động hình -->
+    <h2>Transition</h2>
+    <img class="transition" src="../Pictures/Art/alone_art_field(small).jpg" alt="Art">
+    <!-- Animation -->
+    <h2>Animation</h2>
+    <img class="animation" src="../Pictures/Nature/forest_fog_trees.jpg" alt="Forest">
+</body>
+</html>
