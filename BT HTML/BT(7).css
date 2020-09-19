@@ -1,0 +1,22 @@
+hr{
+    width: 500px;
+}
+address{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+    background-color: plum;
+    display: inline;
+}
+img{
+    margin-right: 30px;
+    float: left;
+    width: 200px;
+    height: 250px;
+}
+ol li ul li{
+    margin-left: 170px;
+}
+h1{
+    color: crimson;
+    margin-left: 250px;
+}

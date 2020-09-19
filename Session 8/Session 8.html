@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 8</title>
+    <style>
+        ul{
+            list-style-type: none;
+            background-color: cyan;
+            overflow: hidden; /*tự động chỉnh background*/
+        }
+        li{
+            float: left;
+            padding: 30px;
+        }
+        li a{
+            text-decoration: none;
+        }
+        li:hover{/*không có dấu cách space*/
+            background-color: darkgoldenrod;
+        }
+
+    @media only screen and (max-width: 500px) {
+        li{
+            float: none;
+            width: 100%;
+        }
+    }
+    .absolute{
+        width: 300px;
+        height: 100px;
+        background-color: darkgreen;
+        position: absolute;/*chỉnh vị trí ảnh*/
+        top: 100px; /* chỉnh vị trí ảnh cách top*/
+        color: darkgrey;
+    }
+    .parent{
+        width: 400px;
+        height: 200px;
+        background-color: darkorange;
+        position: relative;/*thuộc tính liên hệ giữa 2 ảnh*/
+    }
+    .child{
+        width: 200px;
+        height: 100px;
+        background-color: rgb(0, 119, 255);
+        position: absolute;
+        top: 100px;
+    }
+    .fix{ /*tạo khung chat*/
+        width: 300px;
+        height: 200px;
+        background-color: forestgreen;
+        position: fixed;
+        right: 200px;
+        bottom: 0px;
+    }
+    </style>
+</head>
+<body>
+    <p><mark>This is hight light</mark></p>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="https://vnexpress.net/">Home</a></li>
+            <li><a href="https://vnexpress.net/">Product</a></li>
+            <li><a href="https://vnexpress.net/">About</a></li>
+            <li><a href="https://vnexpress.net/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Image map (gán địa chỉ vào ảnh) -->
+    <img src="../Pictures/Art/alone_art_field(small).jpg" alt="Boat on Lake" usemap="#mymap">
+    <map name="mymap">
+        <area style="border-color: darkgreen;" shape="rect" coords="0,0,100,50" href="https://vnexpress.net/" alt="map">
+    </map>
+    <h2>Position: Absolute</h2>
+    <div class="absolute">Absolute position</div>
+    <div class="parent">
+        <div class="child">
+
+        </div>
+    </div>
+
+    <div class="fix">Fixed Position</div>
+</body>
+</html>

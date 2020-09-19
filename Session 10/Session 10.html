@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 10</title>
+    <style>
+        input:required:valid{
+            color: blue;
+        }
+        input:required:invalid{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="PageS10.html" oninput="result.value = parseInt(product.value)*parseInt(qty.value)"> <!--cần require để check text true hay false-->
+        Name: <input type="text" required
+            placeholder="Enter your name"
+            pattern="[a-z]{5,10}"
+            autofocus> <br> <!--placeholder(đặt text vào ô trống);pattern(quy định kiểu nhập và số ký tự yêu cầu nhập); autofocus(tự động nhảy dấu con trỏ vào ô khi load page-->
+        Password: <input type="password" required> <br>
+        Email: <input type="email" required> <br>
+        Url: <input type="url" required> <br>
+        Tel: <input type="tel" required> <br>
+        Number: <input type="number" min="1" max="10" value="1" step="2"><br> <!--Kiểu number (value là gán giá trị;step là nhảy đơn vị)-->
+        Range (điều chỉnh giá trị): 0 <input type="range" min="0" max="100" value="50"> 100 <br>
+        Date: <input type="date"><br>
+        Time: <input type="time"><br>
+        Datetime: <input type="datetime-local"><br> <!--Hiển thị ngày giờ-->
+        File: <input type="file"><br>
+        Genter: <input type="radio" name="gender">Male <!--chọn giới tính dùng radio; phải có trường name="gender" để ko bị tick cùng lúc-->
+                <input type="radio" name="gender">Female
+                <input type="radio" name="gender">Other <br>
+        Favorites: <input type="checkbox">Game
+                    <input type="checkbox">Music
+                    <input type="checkbox">Programming <br>
+        
+        <!-- Datalist là có thể gõ vào 1 lựa chọn khác ngoài list -->
+        Datalist:
+        <input type="text" list="myData">
+        <datalist id="myData">
+            <option value="ATM">ATM</option>
+            <option value="COD">COD</option>
+            <option value="Internetbanking">Internetbanking</option>
+        </datalist> <br>
+        <!-- Select chỉ có thể chọn những nội dung có sẵn -->
+        Select:
+        <select id="myData">
+            <option value="ATM">ATM</option>
+            <option value="COD">COD</option>
+            <option value="Internetbanking">Internetbanking</option>
+        </select> <br>
+        <!-- Select multiple show hết trong list ra -->
+        Select multiple:
+        <select multiple>
+            <option value="ATM">ATM</option>
+            <option value="COD">COD</option>
+            <option value="Internetbanking">Internetbanking</option>
+        </select> <br>
+        Comment:
+        <textarea cols="30" rows="10">Gõ comment vào đây</textarea> <br>
+        Output: <br>
+        Product: <select name="product" id="">
+            <option value="500">Gold</option>
+            <option value="300">Silver</option>
+            <option value="1000">Diamond</option>
+        </select> <br>
+        Quantity: <input type="number" min="0" max="100" value="0" name="qty"> <br>
+        Total: <output name="result"></output> <br>
+        <input type="submit">
+    </form>
+</body>
+</html>

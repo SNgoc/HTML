@@ -1,0 +1,20 @@
+table{
+    border-collapse: collapse;
+    border-color: salmon;
+    background-color: seagreen;
+    margin: auto;/*căn chỉnh table vào giữa*/
+}
+input:required:invalid{
+    color: red;
+}
+input:required:valid{
+    color: green;
+}
+caption{
+    font-size: 33px;
+    color: greenyellow;
+    font-weight: 700;
+}
+td{
+    color: greenyellow;
+}

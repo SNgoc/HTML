@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 12</title>
+    <link rel="stylesheet" href="BT12.css">
+</head>
+<body>
+    <form action="../Pictures/Art/alone_art_field.jpg">
+        <tbody>
+            <table border="1">
+                <caption>Phiếu đăng ký tham gia chương trình khuyến mãi</caption>
+                <tr>
+                    <td style="width: 200px;">Họ và tên</td>
+                    <td style="width: 300px;"><input type="text" id="name" style="width: 90%;" required></td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ</td>
+                    <td><input type="text" id="addr" style="width: 70%;" required></td>
+                </tr>
+                <tr>
+                    <td>Điện thoại</td>
+                    <td><input type="tel" id="tel" style="width: 50%;" pattern="[0-9]{10,11}" required></td>
+                </tr>
+                <tr>
+                    <td>Giới tính</td>
+                    <td>
+                        <input type="radio" name="gender" id="gender"> Nam
+                        <input type="radio" name="gender" id="gender"> Nữ
+                        <input type="radio" name="gender" id="gender"> Other
+                        </td>
+                </tr>
+                <tr>
+                    <td>Nghề nghiệp</td>
+                    <td>
+                        <input type="text" list="dataL" style="width: 30%;">
+                        <datalist id="dataL">
+                            <option value="BS">Bác sĩ</option>
+                            <option value="KS">Kỹ sư</option>
+                            <option value="GV">Giáo viên</option>
+                            <option value="Other">Khác</option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Chọn sản phẩm tham gia</td>
+                    <td>
+                        <select multiple id="data2">
+                            <option value="K">Kem đánh răng</option>
+                            <option value="B">Bột giặt</option>
+                            <option value="D">Dầu gội</option>
+                            <option value="S">Sữa tắm</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>số người dự đoán</td>
+                    <td><input type="number" id="numP" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button onclick="mybutton()">Đồng ý</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><p id="loginS"></p></td>
+                </tr>
+            </table>
+        </tbody>
+    </form>
+<!-- Code onclick chuyển đổi trạng thái khi đăng ký -->
+    <script>
+        function mybutton() {
+            var name = document.getElementById("name").value;
+            var addr = document.getElementById("addr").value;
+            var numP = document.getElementById("numP").value;
+            if (name != 0 && addr != 0 && numP != 0) {
+                document.getElementById("loginS").innerHTML = "Đăng ký thành công!!!";
+                document.getElementById("loginS").style.color = "blue";
+            } 
+            else {
+                document.getElementById("loginS").innerHTML = "Đăng ký thất bại!!!";
+                document.getElementById("loginS").style.color = "red";
+            }
+        }
+    </script>
+    
+</body>
+</html>

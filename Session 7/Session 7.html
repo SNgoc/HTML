@@ -52,6 +52,14 @@
             75% {top:300px; left: 0px;}
             100% {top: 0px; left: 0px;}
         }
+        .div1 {
+            background-color: blueviolet;
+        }
+        @media only screen and (max-width: 600px) { /*thiết lập màn hình cho mobile (Lưu ý: không có ;)*/
+            .div1 {
+                background-color: lightblue;
+            }
+        }
     </style>
 </head>
 <body>
@@ -127,5 +135,8 @@
     <!-- Animation -->
     <h2>Animation</h2>
     <img class="animation" src="../Pictures/Nature/forest_fog_trees.jpg" alt="Forest">
+
+    <!-- Thiết lập màn hình cho mobile -->
+    <h2 class="div1">The division</h2>
 </body>
 </html>

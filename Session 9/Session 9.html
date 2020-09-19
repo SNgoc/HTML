@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 9</title>
+    <style>
+        tr{/*căn chỉnh text trong table*/
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">This is exercise about table</h1>
+    <table border="1">
+        <caption>This is a Table</caption>
+        <tr> <!--Tạo dòng-->
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+        </tr>
+        <tr> <!--đay là Row 1 gồm 3 colummn nhưng merger row với C - Z (merge row phải bỏ các dòng cần merger trước)-->
+            <td>Column 1</td> <!--tạo cột-->
+            <td>Column 2</td>
+            <td rowspan="3">Column 3-C-Z</td>
+        </tr>
+        <tr> <!--đây là Row 2 gồm 3 colum-->
+            <td>Column A</td>
+            <td>Column B</td>
+            <!-- <td>Column C</td> -->
+        </tr>
+        <tr>
+            <!--đây là Row 3 gồm 3 colum nhưng merge column-->
+            <td colspan="2">Column X-Y</td>
+            <!-- <td>Column Y</td> -->
+            <!-- <td>Column Z</td> -->
+        </tr>
+    </table>
+</body>
+</html>

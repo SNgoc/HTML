@@ -1,0 +1,26 @@
+table{
+    border-collapse: collapse;
+    border: 2px solid orangered;
+}
+td{
+    border: 2px solid orangered;
+}
+img{/*căn chỉnh hình ảnh*/
+    display: block;
+    margin: auto;
+}
+ul li ul li{
+    font-size: medium;
+    list-style-type: disc;
+    color:black;
+}
+ul li{
+    font-size: 20px;
+    list-style-type: "";
+    color: red;
+}
+ul li ol li{
+    font-size: medium;
+    list-style-type: decimal;
+    color: black;
+}

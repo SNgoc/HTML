@@ -1,0 +1,16 @@
+table{
+    margin: auto;
+    border-collapse: collapse;
+    border: 2px solid orangered;
+    background-color: cyan;
+    width: auto;
+}
+td{
+    border: 2px solid orangered;
+}
+input:required:valid{
+    color:green;
+}
+input:required:invalid{
+    color: crimson;
+}

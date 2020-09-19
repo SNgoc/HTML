@@ -1,8 +1,27 @@
 body{
     /* khi chèn link ảnh từ website với url phải có '' */
-    background-image: url('https://media.giphy.com/media/3ohhww4ATzb88rvbj2/giphy.gif');
-    background-size: auto;
+    /* background-image: url('https://media.giphy.com/media/3ohhww4ATzb88rvbj2/giphy.gif'); */
+    background-size: cover;
+    /* background-image: url('https://images.wallpaperscraft.com/image/clouds_sky_bridge_people_reflection_sea_92817_1920x1080.jpg'); */
 
     height: 100%;
     width: 100%;
+}
+tr{
+    text-align: center;
+}
+th{
+    background-color: #cc0033;
+}
+table{
+    border-collapse: collapse;
+    border-color: orangered;
+    /* margin: auto; */
+}
+h1{
+    color: crimson;
+}
+img{
+    display: block;
+    margin: auto;
 }

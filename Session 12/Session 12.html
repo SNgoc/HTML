@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 12</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <h2>Paragraph in HTML</h2>
+    <p>javaScript is a scripting and case-sensitive language</p>
+    <button onclick="showAlert()">Click here to show alert</button> <br>
+    <button onclick="showConfirm()">Click here to show confirm</button>
+    <button onclick="showPrompt()">Click here to show Prompt</button>
+    <p>Click here to show</p>
+    <div id="myId">Click her to show by use id</div>
+    <div class="myClass">Click her to show by use class</div>
+    <p id="myResult"></p>
+    <!-- this trong showImage() chính là của thẻ img; Hiển thị ảnh khác khi click vào ảnh -->
+    <img src="../Pictures/Art/alone_art_field(small).jpg" alt="Art" onmousedown="showImage(this,'../Pictures/Nature/forest_fog_trees.jpg')"
+                                                                onmouseup="showImage(this,'../Pictures/Art/alone_art_field(small).jpg')"> <br>
+    <!-- chỉnh màu trong ô text khi nhập và bôi đen -->
+    <input type="text" onfocus="showFocus(this)" onblur="showBlur(this)" onselect="showSelect(this)">
+    <h2>JavaScript</h2>
+    <script>
+        document.write("<br> JavaScript is a \"scripting and\" \\case-sensitive language (in script)")
+        //showAlert()
+        function showAlert()
+        {
+            alert("You have clicked alert");
+        }
+        //showConfirm()
+        function showConfirm()
+        {
+            confirm("You have clicked confirm")
+        }
+        //showPrompt(); showPrompt chỉ là 1 tên function khai báo, không có hàm riêng giống alert và confirm 
+        function showPrompt()
+        {
+            var num1 = parseInt(prompt("Enter a number 1")); //parseInt lấy giá trị số trong 1 chuỗi
+            var num2 = parseInt(prompt("Enter a number 2"));
+            var sum = num1 + num2;
+            document.getElementById("myResult").innerHTML = ("Sum of number 1 " + num1 + "and num2 " + num2 + "is " + sum);
+            //alert("Sum of number 1 " + num1 + "and num2 " + num2 + "is " + sum); //Hiển thị kết quả trong khung
+            //document.write("Sum of number 1 " + num1 + "and num2 " + num2 + "is " + sum); //hiển thị kết quả toàn trang
+        }
+        //showImage(obj,url); tham số hình thức của function: obj là this, url là chỉ ảnh
+        function showImage(obj,url)
+        {
+            obj.src = url;
+        }
+
+        function showFocus(para)
+        {
+            para.style.backgroundColor = "green";
+        }
+        function showBlur(para)
+        {
+            para.style.backgroundColor = "red";
+        }
+        function showSelect(para)
+        {
+            para.style.fontWeight="bold"
+        }
+    </script>
+    <!-- Dùng pre để writeln tự xuống dòng -->
+    <pre>
+        <script>
+            document.write("JavaScript is a");
+            document.writeln(" scripting and");
+            document.writeln("case-sentive language-in script")
+        </script>
+    </pre>
+<script>
+    $(document).ready(function()
+    {
+        $("p").click(function() {
+            alert("You have clicked p");
+        })
+        $("#myId").click(function(){
+            alert("You have clicked by use id");
+        })
+
+        $(".myClass").click(function() {
+            alert("You have clicked by use class");
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 11</title>
+    <link rel="stylesheet" href="BT11.css">
+</head>
+<body>
+    <form action="">
+        <table border="1">
+            <caption><h3>Đăng nhập</h3></caption>
+            <tbody>
+                <tr>
+                    <td>User name:</td>
+                    <td><input type="text" pattern="[a-zA-Z0-9]{4,12}" required id="user" value="" autofocus></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" pattern="[a-zA-Z0-9]{6,15}" required id="pass"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <!-- Onclick event (cách 1) -->
+                        <button onclick="document.getElementById('dispuser').value = document.getElementById('user').value;">Log in</button> <!--Onclick event-->
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input style="text-align: center; width: 97%; border:hidden; background-color: cyan;" 
+                        type="text" id="dispuser"></td> <!--Onclick event-->
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+     <!-- Onclick Event (cách 2)
+    <button onclick="myFunction()">Log in</button>
+    <script>
+        function myFunction() {
+            document.getElementById("dispuser").value = document.getElementById("user").value;
+        }
+    </script>  -->
+
+</body>
+</html>
