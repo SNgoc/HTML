@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="BT12.css">
 </head>
 <body>
-    <form action="../Pictures/Art/alone_art_field.jpg">
+    <form>
         <tbody>
             <table border="1">
                 <caption>Phiếu đăng ký tham gia chương trình khuyến mãi</caption>
                 <tr>
                     <td style="width: 200px;">Họ và tên</td>
-                    <td style="width: 300px;"><input type="text" id="name" style="width: 90%;" required></td>
+                    <td style="width: 300px;"><input type="text" pattern="^[a-z][a-zA-Z0-9]{10,}" id="name" style="width: 90%;" required></td>
                 </tr>
                 <tr>
                     <td>Địa chỉ</td>
@@ -26,6 +26,7 @@
                 <tr>
                     <td>Giới tính</td>
                     <td>
+                        <!-- đặt cùng name để chọn chỉ 1 trong nhóm  -->
                         <input type="radio" name="gender" id="gender"> Nam
                         <input type="radio" name="gender" id="gender"> Nữ
                         <input type="radio" name="gender" id="gender"> Other
@@ -34,19 +35,18 @@
                 <tr>
                     <td>Nghề nghiệp</td>
                     <td>
-                        <input type="text" list="dataL" style="width: 30%;">
-                        <datalist id="dataL">
+                        <select id="select1">
                             <option value="BS">Bác sĩ</option>
                             <option value="KS">Kỹ sư</option>
                             <option value="GV">Giáo viên</option>
                             <option value="Other">Khác</option>
-                        </datalist>
+                        </select>
                     </td>
                 </tr>
                 <tr>
                     <td>Chọn sản phẩm tham gia</td>
                     <td>
-                        <select multiple id="data2">
+                        <select multiple id="select2">
                             <option value="K">Kem đánh răng</option>
                             <option value="B">Bột giặt</option>
                             <option value="D">Dầu gội</option>
@@ -70,6 +70,7 @@
 <!-- Code onclick chuyển đổi trạng thái khi đăng ký -->
     <script>
         function mybutton() {
+            event.preventDefault();
             var name = document.getElementById("name").value;
             var addr = document.getElementById("addr").value;
             var numP = document.getElementById("numP").value;

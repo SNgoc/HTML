@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 14</title>
+</head>
+<body>
+    
+    <script>
+        var cars = ["Audi", "Honda", "Mers", "BMW"];
+        var flowers = ["Rose", "Lavender","Tulip"];
+
+        //concat()
+        var concate = flowers.concat(cars);
+        document.write("Concat is "+ concate);
+
+        //in theo hàng dọc
+        for(var i = 0; i <cars.length; i++)
+        {
+            document.write("<br>");
+            document.write(cars[i]);
+        }
+
+        //join(): chèn 1 ký tự để nối giữa các thuộc tính trong array với nhau
+        var join = flowers.join("*");
+        document.write("<br> join is " + join);
+        document.write("<br> the type of join is " + typeof(join));
+        document.write("<br> flowers is " + flowers);
+            document.write("<br> the type of flowers is " + typeof (flowers));
+
+        //pop()
+        var pop = flowers.pop();
+        document.write("<br> pop is " + pop);
+
+        //push
+        var push = cars.push("Toyota");
+        document.write("<br> push is " + push);
+        document.write("<br> car is " + cars);
+        
+        //sort
+        var sort = flowers.sort();
+        document.write("<br> sort is " + flowers);
+    </script>
+</body>
+</html>

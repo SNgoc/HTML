@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 13</title>
+    <link rel="stylesheet" href="BT13.css">
+</head>
+<body>
+    <form action="">
+        <tbody>
+            <table border="1">
+                <caption>Đăng ký du lịch</caption>
+                <tr>
+                    <td style="width: 100px;">Họ và tên</td>
+                    <td style="width: 300px;"><input type="text" pattern="^[a-z][a-zA-Z0-9]{10,}" id="name" style="width: 90%;" required></td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ</td>
+                    <td><input type="text" id="addr" style="width: 70%;" required></td>
+                </tr>
+                <tr>
+                    <td>Điện thoại</td>
+                    <td><input type="tel" id="tel" style="width: 50%;" pattern="[0-9]{10,11}" required></td>
+                </tr>
+                <tr>
+                    <td>Khách Việt Nam</td>
+                    <td>
+                        <input type="checkbox" name="Nationality" id="Nationality">
+                        </td>
+                </tr>
+                <tr>
+                    <td>Chọn tour</td>
+                    <td>
+                        <select id="select1">
+                            <optgroup label="Miền Bắc">
+                                <option value="HN-HL-SP">Hà Nội- Hạ Long- Sapa</option>
+                                <option value="HN-CH-NB">Hà Nội-Chùa Hương-Ninh Bình</option>
+                                <option value="H-BM-ĐN">Huế-Bạch Mã-Đà Nẵng</option>
+                            </optgroup>
+                            <optgroup label="Miền Trung">
+                                <option value="BMT-GL-KT">Buôn Mê Thuột-Gia Lai-Kontum</option>
+                                <option value="NT-ĐL">Nha Trang-Đà Lạt</option>
+                                <option value="H-BM-ĐN">Huế-Bạch Mã-Đà Nẵng</option>
+                            </optgroup>
+                            <optgroup label="Miền Nam">
+                                <option value="HCM-CT-CM">TP.HCM-Cần Thơ-Cà Mau</option>
+                                <option value="HCM-MT">TP.HCM-Mỹ Tho</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Phương tiện</td>
+                    <td><input type="radio" name="phương tiện" id="máy bay">Máy bay
+                        <input type="radio" name="phương tiện" id="oto">Xe ô tô
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <!-- The <fieldset> tag is used to group related elements in a form.
+                            The <fieldset> tag draws a box around the related elements. -->
+                        <fieldset>
+                            <legend align = "left">Số lượng đoàn khách</legend>
+                            <label for="adult">Người lớn <input type="number" id="adult" style="width: 15%;"></label>
+                            <label for="child">Trẻ em <input type="number" id="child" style="width: 15%;"></label>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ghi chú thêm</td>
+                    <td>
+                        <textarea name="ghi chú" id="ghi chú"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button onclick="mybutton()">Đồng ý</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><p id="loginS"></p></td>
+                </tr>
+            </table>
+        </tbody>
+    </form>
+<!-- Code onclick chuyển đổi trạng thái khi đăng ký -->
+    <script>
+        function mybutton() {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var addr = document.getElementById("addr").value;
+            var tel = document.getElementById("tel").value;
+            var adult = document.getElementById("adult").value;
+            if (name != 0 && addr != 0 && adult > 0 && tel != 0) {
+                document.getElementById("loginS").innerHTML = "Đăng ký thành công!!!";
+                document.getElementById("loginS").style.color = "blue";
+            } 
+            else {
+                document.getElementById("loginS").innerHTML = "Đăng ký thất bại!!!";
+                document.getElementById("loginS").style.color = "red";
+            }
+        }
+    </script>
+    
+</body>
+</html>

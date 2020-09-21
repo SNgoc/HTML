@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 13</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" pattern="[a-z]{2,8}" id=""></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" pattern="\w+" id=""></td> <!--\w+ là cho bất kỳ ký tự nào-->
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="" id=""></td>
+            </tr>
+            <tr>
+                <td><input type="submit"></td>
+                <td><input type="reset"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        var number = 3;
+        document.write("Number after increment is "+ ++number);
+        document.write("<br> Number after decrement is " + number--);
+        document.write("<br> Now number is "+ number);
+
+        var a = 5;
+        var b = "5";
+        if(a==b)
+        {
+            document.write("<br> a is not equal to b when use ==");
+        }
+        if(a===b)
+        {
+            document.write("<br> a is equal to b when use ===");
+        }
+        else
+        {
+            document.write("<br> hello");
+        }
+        //thể hiện kiểu dữ liệu của biến là gì dùng typeof
+        document.write("<br> type of a is "+ typeof(a));
+        document.write("<br> type of b is " + typeof (b));
+        //a=6; a= 7+3 = 10
+        var c = (++a, ++a + number);
+        document.write("<br> c is " +  c);
+        var d = a>number?a:number; //a:number =>a=7; 7>3 => a>number (điều kiện)
+        document.write("<br> d is " + d);
+        var e = a<number?a:number;
+        document.write("<br> e is " + e);
+
+        //Regular Expression
+        var patt = /a/; //var patt =  new RegExp("a");
+        var str  = "This is a string";
+        var result  = patt.test(str);
+        document.write("<br> result is " + result + " and type of result is " + typeof(result));
+        var result1 =  patt.exec(str);
+        document.write("<br> result1 is " + result1 + " and type of result1 is "+ typeof(result1));
+
+        var patt1 = /A/;
+        var res = patt1.test(str);
+        document.write("<br> res is " + res);
+
+        var patt2 = /A/;
+        var res2 = patt2.test(str);
+        document.write("<br> res2 is " + res2);
+
+        var patt3 = /s/g; //chạy lastIndex phải có g
+        while(patt3.test(str))
+        {
+            document.write("<br> lastIndex is " + patt3.lastIndex);
+        }
+
+        var patt4 = /le+d/; //+ là 1-> n; ? là 0->n; * là...
+        var str4 = "this is leed";
+        var res4 = patt4.test(str4);
+        var res5 = patt4.exec(str4);
+        document.write("<br> res4 is " + res4 + " and res5 is " + res5);
+
+        var patt5 = /\d{3}/;
+        var str5 = "1234abcd";
+        var test5 = patt5.test(str5);
+        var exec5 = patt5.exec(str5);
+        document.write("<br> test5 is " + test5 + " and exec5 is " + exec5);
+
+        var patt6 = /(\w+)\s(\d+)\1\2/;
+        var str6 = "ab 123ab1";
+        var test6 = patt6.test(str6);
+        var exec6 = patt6.exec(str6);
+        document.write("<br> test6 is " + test6 + " and exec6 is " + exec6);
+
+        var str7 = "ab 123ab123";
+        var test7 = patt6.test(str7);
+        var exec7 = patt6.exec(str7);
+        document.write("<br> test7 is " + test7 + " and exec7 is " + exec7);
+    </script>
+</body>
+</html>

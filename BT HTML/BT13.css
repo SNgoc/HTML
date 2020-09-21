@@ -1,0 +1,36 @@
+table{
+    border-collapse: collapse;
+    border-color: salmon;
+    background-image: url('https://images.wallpaperscraft.com/image/cliffs_waterfalls_sky_nature_trees_60068_1920x1080.jpg');
+    background-size: cover;
+    /* background-color: seagreen; */
+    margin: auto;/*căn chỉnh table vào giữa*/
+}
+input:required:invalid{
+    color: red;
+}
+input:required:valid{
+    color: green;
+}
+caption{
+    font-size: 33px;
+    color: greenyellow;
+    font-weight: 700;
+}
+td{
+    color: greenyellow;
+}
+fieldset{
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    border-color: rgb(201, 231, 29);
+}
+legend{
+    color: rgb(197, 241, 74);
+    font-style: italic;
+}
+textarea{
+    resize: none;
+    width: 300px;
+}

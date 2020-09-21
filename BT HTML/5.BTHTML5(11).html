@@ -20,10 +20,7 @@
                     <td><input type="password" pattern="[a-zA-Z0-9]{6,15}" required id="pass"></td>
                 </tr>
                 <tr>
-                    <td colspan="2" style="text-align: center;">
-                        <!-- Onclick event (cách 1) -->
-                        <button onclick="document.getElementById('dispuser').value = document.getElementById('user').value;">Log in</button> <!--Onclick event-->
-                    </td>
+                    <td colspan="2" style="text-align: center;"><button onclick="myFunction()">Log in</button></td>
                 </tr>
                 <tr>
                     <td colspan="2"><input style="text-align: center; width: 97%; border:hidden; background-color: cyan;" 
@@ -33,7 +30,14 @@
         </table>
     </form>
 
-     <!-- Onclick Event (cách 2)
+     <!-- Onclick Event (cách 2) -->
+    <script>
+        function myFunction() {
+            event.preventDefault(); //ngăn nhảy event sang page khác hoặc tự clear data sau khi đăng nhập thành công trong form
+            document.getElementById("dispuser").value = document.getElementById("user").value;
+        }
+    </script>
+    <!-- Onclick Event (cách 2)
     <button onclick="myFunction()">Log in</button>
     <script>
         function myFunction() {
