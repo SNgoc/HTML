@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn tập</title>
+</head>
+<body>
+    <h1>Online Shopee</h1>
+    <nav>
+        <a href="">Home</a> |
+        <a href="">Product</a> |
+        <a href="">Shop</a> |
+        <a href="">Register</a> |
+        <a href="">Sign in</a>
+    </nav>
+    <form onsubmit="showInfo()">
+        <!--onsubmit: Gọi hàm khi submit-->
+        <table>
+            <tr>
+                <td>Fullname:</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <!-- đặt cùng name để chọn chỉ 1 trong nhóm  -->
+                    <input type="radio" name="gender" id="gender"> Nam
+                    <input type="radio" name="gender" id="gender"> Nữ
+                    <input type="radio" name="gender" id="gender"> Other
+                </td>
+            </tr>
+            <tr>
+                <td>Pass:</td>
+                <td><input type="password" name="password" id="passord"></td>
+            </tr>
+            <tr>
+                <td>Birthday:</td>
+                <td><input type="date" name="birth" id="birth"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        //showinfo
+        function showInfo() {
+            var username = document.getElementById("name").value;
+            var pass = document.getElementsByName("password")[0].value; //byName trả về array phải thêm truy xuất phần tử thứ mấy
+            var bday = document.getElementById("birth").value; //string
+            var today = new Date();
+            var birth = new Date(bday);
+            var age = Math.floor((today - birth) / (24 * 60 * 60 * 1000 * 365));
+
+            alert("Name: " + username + "Password: " + pass + "Age: " + age);
+        }
+    </script>
+</body>
+</html>

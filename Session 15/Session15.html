@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 15</title>
+</head>
+<body>
+    <script>
+        //Direct Method
+        var student =  new Object();
+        student.name = "Ngoc";
+        student.age = 25;
+        student.address = "SG";
+        //method of student object
+        student.display = function() {
+            document.write("<br> This is method of student object");
+        }
+        document.write("Information of student: Name: " + student.name + "<br> Age: " + student.age + "<br> Address: " + student.address);
+        student.display(); //gọi method phải có thuộc tính student ở trước
+
+        //Template Method
+        function employee (e_id, e_name, e_age) {
+            this.id = e_id; // this là tương ứng với employee; id sẽ được khởi tạo với giá trị tham số đưa vào
+            this.name = e_name;
+            this.age = e_age;
+        }
+        //Create new Object
+        var emp1 = new employee("E01", "Anh", 20); //khởi tạo mới phải đủ 3 tham số như khai báo trước đó
+        document.write("<br>Information of employee1: <br>ID: " + emp1.id + "<br>Name: " + emp1.name + "<br>Age: " + emp1.age);
+
+        //String Object
+        var str = "Hello, Hello";
+        var str2 = "Nam";
+
+        document.write("<br> charAt(0) is " + str.charAt(0));
+        document.write("<br> concat() is " + str.concat(str2));
+        document.write("<br> indexOf(\"llo\") is " + str.indexOf("llo"));
+        document.write("<br> lastindexOf(\"llo\") is " + str.lastIndexOf("llo"));
+        document.write("<br> replace llo by lla: " + str.replace("llo","lla"));
+        document.write("<br> replace llo by lla using regexp:" + str.replace(/llo/g,"lla")); // dùng g để thay thế toàn bộ trong 1 trang (g là global)
+        document.write("<br> search(\"llo\") is " + str.search("llo"));
+        document.write("<br> substr(1,4) is " +str.substr(1,4)); // cắt chuỗi từ array
+
+        //Date Object
+        var today = new Date();
+        document.write("<br>Today is " + today);
+        var startdate = new Date(0);
+        document.write("<br> StartDate is " + startdate);
+        var date = new Date("2020/9/22 11: 13: 00"); // kiểu tiêu chuẩn format ngày/tháng/năm/giờ/phút/giây
+        document.write("<br> Date is "+ date);
+
+        //format Date
+        var ngay = today.getDate();
+        var thu = today.getDay() + 1;//0-6
+        var thang = today.getMonth() + 1;//0-11
+        var nam = today.getFullYear();
+        document.write("<br>Thứ " + thu + " Ngày " + ngay + " Tháng " + thang + " Năm " + nam);
+
+        //đưa ngày tháng năm sinh vào và tính tuổi
+        var namsinh = new Date("1994/3/31");
+        var tuoi = today.getFullYear() - namsinh.getFullYear();
+        document.write("<br> Birthday: "+ namsinh);
+        document.write("<br>Tuổi: " + tuoi);
+        //quy đổi tuổi từ miliseconds sang
+        var age1 = Math.floor((today - namsinh)/(24*60*60*1000*365));//Math.floor để làm tròn số float
+        document.write("<br>Age: " + age1);
+
+        //showinfo
+        function showInfo() {
+            var username = document.getElementById("name").value;
+            var pass = document.getElementsByName("password")[0].value; //byName trả về array phải thêm truy xuất phần tử thứ mấy
+            var bday = document.getElementById("birth").value; //string
+            var today = new Date();
+            var birth = new Date(bday);
+            var age = Math.floor((today - birth) / (24 * 60 * 60 * 1000 * 365));
+
+            alert("Name: " + username + "Password: " + pass + "Age: " + age);
+        }
+    </script>
+
+    <form onsubmit="showInfo()"> <!--onsubmit: Gọi hàm khi submit-->
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>Pass:</td>
+                <td><input type="password" name="password" id="passord"></td>
+            </tr>
+            <tr>
+                <td>Birthday:</td>
+                <td><input type="date" name="birth" id="birth"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

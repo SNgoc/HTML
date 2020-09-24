@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 15</title>
+    <link rel="stylesheet" href="ontapform.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <form onsubmit="showInfo()">
+        <tbody>
+            <table border="0">
+                <tr>
+                    <td colspan="2" style="background-color: seagreen; color: seashell;height: 50px;text-align: center;">
+                        <h1>Member Information</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 200px;">Fullname</td>
+                    <td style="width: 300px;"><input type="text" pattern="^[a-zA-Z][a-zA-Z ]{5,}" id="name" 
+                        style="width: 90%; border-color: crimson;" required></td>
+                </tr>
+                <tr>
+                    <td>Giới tính</td>
+                    <td>
+                        <!-- đặt cùng name để chọn chỉ 1 trong nhóm  -->
+                        <input type="radio" name="gender" value="Nam" id="Nam"> Nam
+                        <input type="radio" name="gender" value="Nữ" id="Nữ"> Nữ
+                        <input type="radio" name="gender" value="Other" id="Other"> Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobbies</td>
+                    <td>
+                        <input type="checkbox" name="hobby" id="Eating out" value="Eating out">Eating out
+                        <input type="checkbox" name="hobby" id="Sporting" value="Sporting">Sporting
+                        <input type="checkbox" name="hobby" id="Shopping" value="Shopping">Shopping
+                    </td>
+                </tr>
+                <tr>
+                    <td>Birthday:</td>
+                    <td><input type="date" name="birth" id="birth"></td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ</td>
+                    <td><input type="text" id="addr" 
+                        style="width: 90%; border-color: crimson;" required></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" pattern="^\w+@\w+\.[a-z]{3}" id="email" 
+                        style="width: 90%; border-color: crimson;" required></td>
+                </tr>
+                <tr>
+                    <td>Điện thoại</td>
+                    <td><input type="tel" id="tel" 
+                        style="width: 90%; border-color: crimson;" pattern="[0-9]{10,11}" required></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                        <select id="select1">
+                            <option value="select">--Select--</option>
+                            <optgroup label="City">
+                                <option value="SG">Sài Gòn</option>
+                                <option value="HN">Hà Nội</option>
+                                <option value="DN">Đà Nẵng</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Comment</td>
+                    <td>
+                        <textarea name="cmt" id="cmt"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button onsubmit id="submit" >Submit</button>
+                                                <button type="reset">Reset</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;" id="loginS"></td>
+                </tr>
+            </table>
+        </tbody>
+    </form>
+<!-- Code onclick chuyển đổi trạng thái khi đăng ký -->
+<script src="ontap.js"></script>
+    
+</body>
+</html>

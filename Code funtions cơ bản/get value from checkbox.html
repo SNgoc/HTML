@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Get Selected Checkboxes Value Using jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <form onsubmit="showCheck()">
+        <h3>Select your location themes:</h3>
+        <input type="checkbox" name="locationthemes" id="checkbox-1" value="2" class="custom" />
+        <label for="checkbox-1">Castle</label>
+        <input type="checkbox" name="locationthemes" id="checkbox-2" value="3" class="custom" />
+        <label for="checkbox-2">Barn</label>
+        <input type="checkbox" name="locationthemes" id="checkbox-3" value="5" class="custom" />
+        <label for="checkbox-3">Restaurant</label>
+        <input type="checkbox" name="locationthemes" id="checkbox-4" value="8" class="custom" />
+        <label for="checkbox-4">Bar</label>
+        <br>
+        <button onsubmit class="btn" id="btn">Get Values</button>
+    </form>
+
+    <script>
+    //Code to show value checkbox
+    function showCheck() {
+        var check = document.getElementsByName('locationthemes');
+        var showcheck = [];
+        for (var i = 0, length = check.length; i < length; i++) {
+            if (check[i].checked) {//kiểm tra ô radio có check hay không
+                // do whatever you want with the checked radio
+                showcheck.push(check[i].value);
+            }
+        }//end code
+        alert("My locationthemes is " + showcheck);
+    }
+    </script>
+</body>
+
+</html>

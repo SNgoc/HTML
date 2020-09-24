@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT12</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border: 1px solid green;
+        }
+        th{
+            color:red;
+            font-weight:bold;
+            font-size:20px;
+        }
+        td{
+            background-color:darkseagreen;
+            color:green;
+        }
+        input:required:invalid{
+            color: red;
+        }
+        input:required:valid{
+            color: black
+        }
+    </style>
+</head>
+<body>
+    <form action="#" >
+        <table width="500" height="350" border="1" align="center">
+            <tr>
+                <th colspan="2" align="center">Phiếu đăng kí tham gia chương trình khuyến mãi</th>
+            </tr>
+            <tr>
+                <td>Họ và tên</td>
+                <td><input type="text" placeholder="Nhập họ tên" size="30" name="name" id="name" required></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="text" placeholder="Nhập địa chỉ" size="30" name="address" id="addr" required></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="number" placeholder="Nhập sđt" size="30" name="phone" id="numP" required></td>
+            </tr>
+            <tr>
+                <td>Phái</td>
+                <td><input type="radio" name="gender">Nam
+                    <input type="radio" name="gender">Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Nghề nghiệp</td>
+                <td>
+                    <Select>
+                        <option value="Bác sĩ">Bác sĩ</option>
+                        <option value="Kỹ sư">Kỹ sư</option>
+                        <option value="Giáo viên">Giáo viên</option>
+                        <option value="Khác">Khác</option>
+                    </Select>
+                </td>
+            </tr>
+            <tr>
+                <td>Chọn sản phẩm tham gia</td>
+                <td>
+                        <select multiple>
+                            <option value="Kem đánh răng">Kem đánh răng</option>
+                            <option value="Bột giặt">Bột giặt</option>
+                            <option value="Dầu gội đầu">Dàu gội đầu</option>
+                            <option value="Sữa tắm">Sữa tắm</option>
+                        </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Số người dự đoán tham gia</td>
+                <td><input type="number" name=""></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                <button type="submit" name="submit" onclick="mybutton()">Đồng ý</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <p id="loginS"></p>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function mybutton() {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var addr = document.getElementById("addr").value;
+            var numP = document.getElementById("numP").value;
+            if (name != 0 && addr != 0 && numP != 0) {
+                document.getElementById("loginS").innerHTML = "Đăng ký thành công!!!";
+                document.getElementById("loginS").style.color = "blue";
+            } 
+            else {
+                document.getElementById("loginS").innerHTML = "Đăng ký thất bại!!!";
+                document.getElementById("loginS").style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
