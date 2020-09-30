@@ -1,0 +1,22 @@
+
+ul{
+    border: solid black;
+    border-width: medium;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    list-style-type: none;
+    overflow: hidden; /*tự động chỉnh background*/
+}
+li{
+    float: left; /*chỉnh menu nằm ngang*/
+    padding: 10px;
+}
+li a{
+    font-size: 30px;
+    text-decoration: none;
+    width: 265px;
+}
+li:hover{/*không có dấu cách space*/
+    background-color: darkgoldenrod;
+}

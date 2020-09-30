@@ -36,6 +36,7 @@ h1{
     padding-top: 7px; /*căn vị trí text trong khung*/
 }
 ul{
+    background-color: lightskyblue;
     border: solid black;
     border-width: medium;
     border-left: none;
@@ -56,11 +57,15 @@ li a{
 li:hover{/*không có dấu cách space*/
     background-color: greenyellow;
 }
+body{
+    background-color: lightskyblue;
+}
 /* Chỉnh ảnh background */
 .p1{
 
     text-align: center;
     margin-top: 370px;
+    font-weight: bolder;
 }
 @media only screen and (max-width: 800px){
     li{

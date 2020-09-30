@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 18</title>
+</head>
+<body>
+    <button onclick="getName()">Click here to get name</button>
+    <div id="myName"></div>
+    <button onclick="counterSesssion()">Click here to view counter - sessionStorage</button>
+    <div id="myCounter"></div>
+    <button onclick="counterLocal()">Click here to view counter - localStorage</button>
+    <div id="myCounter1"></div>
+
+    <script>
+        function getName() {
+            sessionStorage.setItem("name","ABC");
+            var uname = sessionStorage.getItem("name"); //uname = ABC
+            document.getElementById("myName")
+          }
+
+        function counterSesssion(){
+            if(sessionStorage.counter)
+            {
+                sessionStorage.counter = (Number)(sessionStorage.counter) + 1;
+            }
+            else{
+                sessionStorage.counter = 1;
+            }
+            document.getElementById("myCounter").innerHTML ="Counter: " + sessionStorage.counter;
+        }
+        function counterLocal(){
+            if(localStorage.counter){
+                localStorage.counter = (Number)(localStorage.counter) + 1;
+            }
+            else{
+                localStorage.counter = 1;
+            }
+            document.getElementById("myCounter1").innerHTML = "Counter: " + localStorage.counter;
+        }
+    </script>
+</body>
+</html>

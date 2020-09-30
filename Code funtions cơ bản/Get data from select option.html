@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get data of Select option</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <select id="category" name="category">
+        <option value="0">Please Select</option>
+        <option value="50" data-value="akne">ACNE</option>
+        <option value="11" data-value="rednessbumps">Redness / Bumps</option>
+        <option value="15" data-value="sunspotsfreckles">Sunspots / Freckles</option>
+        <option value="16" data-value="agingwrinkles">Aging / Wrinkles</option>
+        <option value="17" data-value="dry-sensitive">Dry Sensitive</option>
+    </select>
+
+    <script>
+        $("#category").change(function () {
+            var abc = $('option:selected', this).data("value");
+            alert(abc);
+        });       
+    </script>
+</body>
+</html>

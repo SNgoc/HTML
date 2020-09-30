@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 19</title>
+    <script src="http://maps.google.com/maps/api/js?sensor=false">
+    </script>
+    <style>
+        #mapImage{
+            border: solid;
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="getLocation()">Click here to get location</button>
+    <div id="myPosition"></div>
+    <div id="mapImage"></div>
+
+    <script>
+        function getLocation(){
+            var location = navigator.geolocation.getCurrentPosition(showPosition, errorFunc, options);
+
+            function showPosition(position){
+                var lat = position.coords.latitude; //vĩ độ
+                var long = position.coords.longitude; //kinh độ
+                document.getElementById("myPosition").innerHTML = "Latitude is " + lat +
+                                                                  "<br>Longitude is " + long;     
+                
+                //Load google map
+                var coordinate = new google.maps.LatLng(lat,long);
+
+                var myOptions = {
+                    zoom: 10,
+                    center: coordinate,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+
+                var mymap = new google.maps.Map(document.getElementById("mapImage"),myOptions);
+
+                var marker ={
+                    position: coordinate,
+                    map: mymap,
+                    title: "My Location"
+                }
+
+                var myMarker = new google.maps.Marker(marker);
+            }
+
+            function errorFunc(error){
+                switch (error.code){
+                    case error.PERMISSION_DENIED:
+                        alert("You have denied to get position");
+                        break;
+                    
+                    case error.POSITION.UNAVAILABLE:
+                        alert("Cannot get your position");
+                        break;
+
+                    case error.TIMEOUT:
+                        alert("Timeout");
+                        break;
+                }
+            }
+            
+            var options ={
+                enableHighAccuracy: true,
+                maximumAge: 50000,
+                timeout: 60000
+            }
+        }
+        
+    </script>
+</body>
+</html>

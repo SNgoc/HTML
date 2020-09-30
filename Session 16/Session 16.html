@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 16</title>
+</head>
+<body>
+    <form action="">
+        <!-- Tên đăng nhập bắt đầu bằng 1 ký tữ a-z hoặc _ -->
+        Name: <input type="text" pattern="^[a-z_][a-z0-9\._]{5,20}" id="name" required> <br>
+        <!--Dấu ^ bắt buộc bắt đầu str theo quy định, dấu $ kết thúc str-->
+        <!-- Kiểm tra email hợp lệ -->
+        Email: <input type="email" pattern="^\w+@\w+\.[a-z]{2,3}" id="email" required>
+        <!--\w+ (là bất kỳ ký tự nào) \. là định dạng yêu cầu dấu .-->
+        <!-- Kiểm tra mật hẩu hợp lệ bắt buộc phải có ít nhất 1 chữ in hoa, 1 chữ thường, 1 số, 1 ký tự đặc biệt -->
+        Password: <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{6,12}" required>
+        <button type="submit" value="">Submit</button>
+    </form>
+</body>
+</html>

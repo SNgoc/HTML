@@ -1,0 +1,61 @@
+h1{
+    text-align: center;
+    background-color: forestgreen;
+    color: ghostwhite;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 35px;
+    padding-top: 7px; /*căn vị trí text trong khung*/
+}
+ul{
+    border: solid black;
+    border-width: medium;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    list-style-type: none;
+    overflow: hidden; /*tự động chỉnh background*/
+}
+li{
+    float: left; /*chỉnh menu nằm ngang*/
+    padding: 20px;
+    width: 250px;
+}
+li a{
+    font-size: 30px;
+    text-decoration: none;
+}
+li:hover{/*không có dấu cách space*/
+    background-color: greenyellow;
+}
+/* Chỉnh ảnh background */
+body{
+    background-image: url('/Pictures/Shoppe/home.JPG');
+    background-repeat: no-repeat;
+    background-size: 700px;
+    background-position: 50% 180px;
+}
+.p1{
+
+    text-align: center;
+    margin-top: 370px;
+}
+@media only screen and (max-width: 800px){
+    li{
+        float: left;
+        width: 50%;
+    }
+    body{
+        background-image: url('/Pictures/Shoppe/home.JPG');
+        background-position: 10px 480px;
+        background-size: 95%;
+        background-repeat: no-repeat;
+    }
+    .p1{
+        text-align: center;
+        margin-top: 250px;
+    }
+    li:hover{
+        background-color: goldenrod;
+    }
+}

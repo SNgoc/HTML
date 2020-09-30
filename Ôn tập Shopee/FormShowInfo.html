@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Show Info</title>
+    <link rel="stylesheet" href="Form.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <!-- Web Shopee -->
+    <h1>Online Shopee</h1>
+    <nav>
+        <ul>
+            <li><a href="/Ôn tập Shopee/Shopee.html">Home</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="/Ôn tập Shopee/FormRegister.html">Register</a></li>
+            <li><a href="">Sign in</a></li>
+        </ul>
+    </nav>
+
+    <!-- FORM THÔNG TIN ĐĂNG KÝ THÀNH CÔNG -->
+    <form action="/Ôn tập Shopee/Shopee.html">
+        <tbody>
+            <table border="0">
+                <tr>
+                    <td colspan="2" style="background-color: seagreen; color: seashell;height: 50px;text-align: center;">
+                        <h1>Member Information</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 200px;">Fullname</td>
+                    <td id="data1"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td id="data2"></td>
+                </tr>
+                <tr>
+                    <td>Hobbies</td>
+                    <td id="data3"></td>
+                </tr>
+                <tr>
+                    <td>Birthday:</td>
+                    <td id="data4"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td id="data5"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td id="data6"></td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td id="data7"></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td id="data8"></td>
+                </tr>
+                <tr>
+                    <td>Comment</td>
+                    <td id="data9"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button onclick>OK</button></td>
+                </tr>
+            </table>
+        </tbody>
+    </form>
+<!-- Code hiển thị thông tin sau khi đăng ký thành công -->
+    <script>
+        /*Tên gán giá trị cho các var*/
+        // localStorage.setItem("name1",username);
+        // localStorage.setItem("gender2",radios);
+        // localStorage.setItem("hobbies3",hobbies);
+        // localStorage.setItem("birth4",bday);
+        // localStorage.setItem("addr5",addr);
+        // localStorage.setItem("email6", email);
+        // localStorage.setItem("tel7",phone);
+        // localStorage.setItem("cities8",cities);
+        // localStorage.setItem("cmt9", cmt);
+        document.getElementById("data1").innerHTML = localStorage.getItem("name1");
+        document.getElementById("data2").innerHTML = localStorage.getItem("gender2");
+        document.getElementById("data3").innerHTML = localStorage.getItem("hobbies3");
+        document.getElementById("data4").innerHTML = localStorage.getItem("birth4");
+        document.getElementById("data5").innerHTML = localStorage.getItem("addr5");
+        document.getElementById("data6").innerHTML = localStorage.getItem("email6");
+        document.getElementById("data7").innerHTML = localStorage.getItem("tel7");
+        document.getElementById("data8").innerHTML = localStorage.getItem("cities8");
+        document.getElementById("data9").innerHTML = localStorage.getItem("cmt9");
+    </script>
+</body>
+</html>

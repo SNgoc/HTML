@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Username</title>
+    <style>
+        input:required:invalid{
+            color: crimson;
+        }
+        input:required:valid{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hiển thị thông báo check username nhập vào (dùng pattern script) -->
+    <p>Validate UserName:</p> <br>
+    <div>Enter your name: <input type="text" name="name" id="user" pattern="^[a-zA-Z]{3,5}" required></div>
+
+    <script>
+        
+    </script>
+</body>
+</html>

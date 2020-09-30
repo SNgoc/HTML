@@ -8,6 +8,7 @@ function showInfo() {
     var today = new Date();
     var birth = new Date(bday);
     var age = Math.floor((today - birth) / (24 * 60 * 60 * 1000 * 365));
+    var cities = document.getElementById('cities').value;//show selected city (đặt id tại selected)
 
     //Code to show gender
     var radios = document.getElementsByName('gender');
@@ -31,8 +32,9 @@ function showInfo() {
     }//end code show Hobbies
 
     if (age >= 17) {
-        alert("Name: " + username + "\nGender: " + radios + "\nHobbies: " + hobbies + 
-        "\nBirthday: " + bday + "\nAddress: " + addr + "\nEmail: " + email + "\nPhone: " + phone + "\nCity: " + "\nComment: " +cmt);
+        alert( "Member information:" + "\n---------------------" +
+            "\nName: " + username + "\nGender: " + radios + "\nHobbies: " + hobbies + 
+        "\nBirthday: " + bday + "\nAddress: " + addr + "\nEmail: " + email + "\nPhone: " + phone + "\nCity: " + cities + "\nComment: " +cmt);
         event.preventDefault();
     } 
     else {
