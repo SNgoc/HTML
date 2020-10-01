@@ -1,3 +1,31 @@
+/* CSS layout Form */
+table{
+    border-color: salmon;
+    background-color: white;
+    margin: auto;/*căn chỉnh table vào giữa*/
+    border: solid blue;
+    border-style: double;
+}
+input:required:invalid{
+    color: red;
+}
+input:required:valid{
+    color: blue;
+}
+td{
+    color: black;
+}
+textarea{
+    width: 300px;
+    height: 70px;
+}
+button{
+    font-weight: bold;
+    border-radius: 15px;
+    border: solid;
+    border-style: double;
+}
+/* CSS Layout Web */
 h1{
     text-align: center;
     background-color: forestgreen;
@@ -8,7 +36,7 @@ h1{
     padding-top: 7px; /*căn vị trí text trong khung*/
 }
 ul{
-    background-color: lightseagreen;
+    background-color: lightskyblue;
     border: solid black;
     border-width: medium;
     border-left: none;
@@ -29,14 +57,10 @@ li a{
 li:hover{/*không có dấu cách space*/
     background-color: greenyellow;
 }
-/* Chỉnh ảnh background */
 body{
-    background-image: url('/Pictures/Shoppe/home.JPG');
-    background-repeat: no-repeat;
-    background-size: 700px;
-    background-position: 50% 180px;
     background-color: lightskyblue;
 }
+/* Chỉnh ảnh background */
 .p1{
 
     text-align: center;
@@ -48,15 +72,9 @@ body{
         float: left;
         width: 50%;
     }
-    body{
-        background-image: url('/Pictures/Shoppe/home.JPG');
-        background-position: 10px 480px;
-        background-size: 95%;
-        background-repeat: no-repeat;
-    }
     .p1{
         text-align: center;
-        position: relative;
+        margin-top: 250px;
     }
     li:hover{
         background-color: goldenrod;

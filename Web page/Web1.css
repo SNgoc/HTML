@@ -1,3 +1,25 @@
 h1{
     text-align: center;
+    background-color: green;
+}
+ul{
+    border: solid;
+    overflow: hidden;
+    border-left: none;
+    border-right: none;
+}
+ul li{
+    float: left;
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    color: blue;
+    font-weight: bolder;
+}
+li a{
+    text-decoration: none;
+    font-size: 20px;
+}
+li:hover{
+    background-color: greenyellow;
 }

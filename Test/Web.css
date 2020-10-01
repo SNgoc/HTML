@@ -56,7 +56,7 @@ body{
     }
     .p1{
         text-align: center;
-        position: relative;
+        margin-top: 250px;
     }
     li:hover{
         background-color: goldenrod;
