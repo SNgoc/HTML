@@ -32,7 +32,8 @@
   display: block;
   padding: 12px;
   text-decoration: none;
-  height: 77px;
+  height: 78px;
+  padding-top: 25px;
 }
 
 .vertical-menu a:hover {
