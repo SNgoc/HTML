@@ -160,7 +160,7 @@ function displayCart() {
             "<td>" +
             cartArray[i].name +
             "</td>" +
-            "<td>(" +
+            "<td>(USD: " +
             cartArray[i].price +
             ")</td>" +
             "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" +
@@ -180,7 +180,7 @@ function displayCart() {
             " = " +
             "<td>" +
             cartArray[i].total +
-            "</td>" +
+            " $</td>" +
             "</tr>";
     }
     $(".show-cart").html(output);
