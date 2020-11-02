@@ -185,7 +185,7 @@ function displayCart() {
     }
     $(".show-cart").html(output);
     $(".total-cart").html(shoppingCart.totalCart());
-    $(".total-count").html(shoppingCart.totalCount());
+    $(".total-count.Cart").html(shoppingCart.totalCount());
 }
 
 // Delete item button

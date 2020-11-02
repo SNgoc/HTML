@@ -175,7 +175,7 @@ function displayFavor() {
     }
     $(".show-favor").html(output);
     $(".total-favor").html(Favorite.totalFavor());
-    $(".total-count").html(Favorite.totalCount());
+    $(".total-count.Favor").html(Favorite.totalCount());
 }
 
 // Delete item button
