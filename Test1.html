@@ -1,143 +1,71 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Học web chuẩn</title>
-    <link rel="stylesheet" href="/exercises/css/fontawesome.css" media="all">
-    <style>
-        /* Reset */
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        body {
-            color: #a6a6a6;
-            font-family: Helvetica, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .clearfix {
-            zoom: 1;
-        }
-
-        .clearfix:after {
-            clear: both;
-            content: ".";
-            display: block;
-            height: 0;
-            line-height: 0;
-            visibility: hidden;
-        }
-
-        /* Layout */
-        .learning {
-            margin: 30px auto;
-            width: 1150px;
-        }
-
-        .learning .photo {
-            float: left;
-            width: 360px;
-        }
-
-        .learning .info {
-            float: right;
-            width: 720px;
-        }
-
-        .learning .info h2 {
-            color: #000;
-            font-size: 28px;
-            line-height: 1.5;
-            margin-bottom: 31px;
-        }
-
-        .learning .info h2 em {
-            background-color: #01bacf;
-            color: #fff;
-            display: inline-block;
-            font-style: normal;
-            padding: 0 10px;
-        }
-
-        .learning .info .lead-text {
-            margin-bottom: 50px;
-        }
-
-        .learning .info .learning-list {
-            margin-bottom: 60px;
-        }
-
-        .learning .info .learning-list li {
-            float: left;
-            width: 230px;
-            margin-bottom: 8px;
-            margin-right: 10px;
-        }
-
-        .learning .info .learning-list li i {
-            color: #01bacf;
-            font-size: 14px;
-            margin-right: 7px;
-        }
-
-        .learning .info .more a {
-            background-color: #01bacf;
-            color: #fff;
-            display: inline-block;
-            font-size: 14px;
-            font-weight: bold;
-            height: 48px;
-            line-height: 48px;
-            min-width: 194px;
-            padding: 0 10px;
-            text-align: center;
-            text-decoration: none;
-            transition: 0.3s background-color;
-        }
-
-        .learning .info .more a:hover {
-            background-color: #05d4eb;
-        }
-    </style>
-</head>
-
-<body>
-    <section class="learning clearfix">
-        <div class="photo"><img src="/exercises/images/img_360x570.png" alt="Learning system"></div>
-        <div class="info">
-            <h2>We are passionate <em>learning system</em> from London. Do beautiful and easy-to-use digital design
-                &amp; web development</h2>
-            <p class="lead-text">Nullam eu justo quis mi varius malesuada nec vitae magna. Pellentesque nec volutpat
-                neque. Praesent a imperdiet sapien, non placerat purus. Donec et finibus ante. Morbi justo enim, semper
-                pulvinar mollis et, accumsan sed dolor.</p>
-            <ul class="learning-list clearfix">
-                <li><i class="fas fa-check"></i> Custom Shortcodes</li>
-                <li><i class="fas fa-check"></i> Font Awesome Icons</li>
-                <li><i class="fas fa-check"></i> Shopping Layouts</li>
-                <li><i class="fas fa-check"></i> Visual Page Builder</li>
-                <li><i class="fas fa-check"></i> Pre-Defined Colors</li>
-                <li><i class="fas fa-check"></i> Pre-Defined Fonts</li>
-                <li><i class="fas fa-check"></i> Unlimited Shortcodes</li>
-                <li><i class="fas fa-check"></i> AJAX Transitions</li>
-                <li><i class="fas fa-check"></i> Style Changers</li>
-                <li><i class="fas fa-check"></i> Responsive Theme</li>
-                <li><i class="fas fa-check"></i> High Quality Support</li>
-                <li><i class="fas fa-check"></i> Footer Styles</li>
-                <li><i class="fas fa-check"></i> Tons of Layouts</li>
-                <li><i class="fas fa-check"></i> Unlimited Options</li>
-                <li><i class="fas fa-check"></i> Header Styles</li>
+            <ul class="nav navbar-nav navbar-right nav2">
+                <li><a href="index.html" style="color: white;">Sale !</a></li>
+                <li><a href="index.html" style="color: white;">New Items</a></li>
+                <li><a href="index.html" style="color: white;">Best Sellers</a></li>
+                <!-- FAVORITE -->
+                <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#favor" style="color: #b33b48; background-color: white;">
+                    <span class="glyphicon glyphicon-heart"></span>Favorite (<span class="total-count Favor"></span>)</button>
+                </li>
+                <!-- SHOPPING CART -->
+                <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart" style="background-color:#b33b48; border-color: white; color: white;">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>Cart (<span class="total-count Cart"></span>)</button>
+                </li>
             </ul>
-            <p class="more"><a href="./">Learn more about us</a></p>
-        </div>
-    </section>
-</body>
 
-</html>
+<!-- Show-favorite table -->
+<!-- Modal -->
+<div class="modal fade" id="favor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Favorite List</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="show-favor table">
+
+                </table>
+                <div>Total in Favorite List: <span class="total-favor"></span></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Show-cart table -->
+<!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="show-cart table">
+
+                </table>
+                <div>Total price: $<span class="total-cart"></span></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary order">Order now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- JS FILE -->
+
+    <!-- ADD TO FAVORITE -->
+    <script src="./js/Add to Favorite.js"></script>
+    <!-- Code ADD TO CART -->
+    <script src="./js/Add to Cart.js"></script>
+    <!-- Scroll Top button -->
+    <script src="./js/ScrollTop.js"></script>
