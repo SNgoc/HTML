@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="u.css">
+        <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="u.js"></script>
+</head>
+<body>        
+    <div id="wrap" class="wrap">
+        <div class="wrap-inner">
+        
+        <!--Login Section-->
+        <div class="section" id="section1">
+          <div class="form form--login">
+            <h1 class="alpha">Login</h1>
+            <div>
+              <form class="form-wrap" >
+                <input id="email" class="inputbox email" type="text" placeholder="Email id" required>
+                <input id="password" class="inputbox password" type="password" placeholder="Password" required><br>
+                <button type="button" class="btn btn-primary" onclick="myFunction()">Login</button>
+              </form>
+              <p>Forget password? It's ok. <a class="scroll" href="#section3" data-section="3">Recover here &raquo;</a></p>
+            </div>
+            <hr />
+            <p>Or you can Login with one of the following</p>
+            <div class="social">
+              <a href="https://vi-vn.facebook.com/" class="facebook"><i class="icon-facebook">Facebook</i></a>
+              <a href="https://twitter.com/?lang=vi" class="twitter"><i class="icon-twitter">Twitter</i></a>
+              <a href="https://accounts.google.com/" class="google"><i class="icon-google-plus">Google+</i></a>
+            </div>
+            <p>Don't have an account? <a class="scroll" href="#section2" data-section="2">Register Now &raquo;</a></p>
+          </div>
+        </div>
+        <!--END: Login Section-->
+         
+        <!--Signup Section-->
+        <div class="section" id="section2">
+          <div class="form form--signup">
+            <h1 class="alpha">Register</h1>
+            <div>
+              <form class="form-wrap" onsubmit="return validate()">
+                <input id="fname" class="inputbox name" type="text" placeholder="Your Name" required>
+                <input id="memail" class="inputbox email" type="text" placeholder="Email id" required>
+                <input id="pass" class="inputbox password" type="password" placeholder="Password" required>
+                <input id="confirm" class="inputbox password" type="password" placeholder="Confirm Password" required>
+                <button type="button" class="btn btn-info" onclick="myFunction()">Create my Account</button>
+                <!--<input id="" type="button" class="button" value="Sign up" />-->
+              </form>
+            </div>
+            <hr />
+            <p>Or you can Signup with one of the following</p>
+            <div class="social">
+              <a href="https://vi-vn.facebook.com/" class="facebook"><i class="icon-facebook"></i><span>Facebook</span></a>
+              <a href="https://twitter.com/?lang=vi" class="twitter"><i class="icon-twitter"></i><span>Twitter</span></a>
+              <a href="https://accounts.google.com/" class="google"><i class="icon-google-plus"></i><span>Google+</span></a>
+            </div>
+            <p><a class="scroll" href="#section1" data-section="1">&laquo; Login here</a></p>
+          </div>
+        </div>
+        <!--END: Signup Section-->
+         
+        <!--Forget Password Section-->
+        <div class="section" id="section3">
+          <div class="form form--login">
+            <h1 class="alpha">Fotgot password?</h1>
+            <div>
+              <form class="form-wrap" >
+                <input id="email2" class="inputbox email" type="text" placeholder="Email id" required>
+                <button type="button" class="btn btn-info" onclick="myFunction()">Send me</button>
+              </form>
+            </div>
+            <hr />
+            <p>You remember your Password? Brilliant!</p>
+            <p><a class="scroll" href="#section1" data-section="1">&laquo; Login here</a></p>
+          </div>
+        </div>
+        <!--END: Forget Password Section-->
+        </div>
+        </div>
+        
+</body>
+</html>
