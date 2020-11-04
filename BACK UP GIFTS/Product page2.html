@@ -48,13 +48,16 @@
             </ul>
         <div class="container">
             <ul class="nav navbar-nav navbar-right nav2">
-                <li><a href="" style="color: white;">Sale !</a></li>
-                <li><a href="" style="color: white;">New Items</a></li>
-                <li><a href="" style="color: white;">Best Sellers</a></li>
-                <li><a class="btn btn-primary" href="#" role="button" style="color: #b33b48; background-color: white;"><span class="glyphicon glyphicon-heart"></span>Favorite</a></li>
+                <li><a href="index.html" style="color: white;">Sale !</a></li>
+                <li><a href="index.html" style="color: white;">New Items</a></li>
+                <li><a href="index.html" style="color: white;">Best Sellers</a></li>
+                <!-- FAVORITE -->
+                <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#favor" style="color: #b33b48; background-color: white;">
+                    <span class="glyphicon glyphicon-heart"></span>Favorite (<span class="total-count Favor"></span>)</button>
+                </li>
                 <!-- SHOPPING CART -->
-                <li><button type="button" class="btn btn-primary favorcart" data-toggle="modal" data-target="#cart" style="background-color:#b33b48; border-color: white; color: white;">
-                    <span class="glyphicon glyphicon-shopping-cart"></span>Cart (<span class="total-count"></span>)</button>
+                <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart" style="background-color:#b33b48; border-color: white; color: white;">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>Cart (<span class="total-count Cart"></span>)</button>
                 </li>
             </ul>
         </div>
@@ -66,28 +69,28 @@
         <ul class="nav nav-tabs">
             <li class="active"><a href="Product page1.html">Categories</a></li>
     
-            <li class="dropdown ddnav3"><a href="./Products/2.Cushion_Soft Toys.html" data-toggle="dropdown">Cushions & Soft Toys</a>
+            <li class="dropdown ddnav3"><a href="./Products/2.Cushion_Soft Toys.html">Cushions & Soft Toys</a>
                 <ul class="dropdown-menu">
                     <li><a href="./Products/2.Cushion.html">Cushions</a></li>
                     <li><a href="./Products/2.Soft Toys.html">Soft Toys</a></li>
                 </ul>
             </li>
     
-            <li class="dropdown ddnav3"><a href="./Products/1.Coffee Mugs_Tea Cups.html" data-toggle="dropdown">Coffee Mugs & Tea Cups</a>
+            <li class="dropdown ddnav3"><a href="./Products/1.Coffee Mugs_Tea Cups.html">Coffee Mugs & Tea Cups</a>
                 <ul class="dropdown-menu">
                     <li><a href="./Products/1.Coffee Mugs.html">Coffee Mugs</a></li>
                     <li><a href="./Products/1.Tea Cups.html">Tea Cups</a></li>
                 </ul>
             </li>
     
-            <li class="dropdown ddnav3"><a href="./Products/3.Fashions_Accessories.html" data-toggle="dropdown">Fashion & Accessories</a>
+            <li class="dropdown ddnav3"><a href="./Products/3.Fashions_Accessories.html">Fashion & Accessories</a>
                 <ul class="dropdown-menu">
                     <li><a href="./Products/3.Fashions.html">Fashion</a></li>
                     <li><a href="./Products/3.Accessories.html">Accessories</a></li>
                 </ul>
             </li>
     
-            <li class="dropdown ddnav3"><a href="./Products/4.Gift Cards.html" data-toggle="dropdown">Gift Cards</a>
+            <li class="dropdown ddnav3"><a href="./Products/4.Gift Cards.html">Gift Cards</a>
                 <ul class="dropdown-menu">
                     <li><a href="./Products/4.Gift Cards.html">Gift cards</a></li>
                 </ul>
@@ -425,30 +428,54 @@
         </div>    
     </div>
 
-    <!-- Show-cart table -->
-    <!-- Modal -->
-    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <table class="show-cart table">
+<!-- Show-favorite table -->
+<!-- Modal -->
+<div class="modal fade" id="favor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Favorite List</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="show-favor table">
 
-                    </table>
-                    <div>Total price: $<span class="total-cart"></span></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary order">Order now</button>
-                </div>
+                </table>
+                <div>Total in Favorite List: <span class="total-favor"></span></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Show-cart table -->
+<!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="show-cart table">
+
+                </table>
+                <div>Total price: $<span class="total-cart"></span></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary order">Order now</button>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!--Pagination-->
     <div class="container">
@@ -530,7 +557,9 @@
 
     <!-- JS FILE -->
 
-    <!-- ADD TO CART -->
+    <!-- ADD TO FAVORITE -->
+    <script src="./js/Add to Favorite.js"></script>
+    <!-- Code ADD TO CART -->
     <script src="./js/Add to Cart.js"></script>
     <!-- Scroll Top button -->
     <script src="./js/ScrollTop.js"></script>
