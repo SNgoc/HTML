@@ -1,5 +1,10 @@
 /* Product Details Page */
 
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Logo */
 .logo{
     height: 25px;
@@ -48,6 +53,10 @@
 .navbar3 .ddnav3 a{
     color: #d14352;
     font-weight: bolder;
+}
+
+.navbar3 ul.nav-tabs li.active a{
+    cursor: pointer;
 }
 
 .btn{
@@ -142,6 +151,9 @@
     color: orange;
 }
 /* INFORMATIVE PRODUCT */
+.textIntro{
+    width: 20cm;
+}
 .line {
     border-bottom: 1px solid;
     margin-top: 10px;

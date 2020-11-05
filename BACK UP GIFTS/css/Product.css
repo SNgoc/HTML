@@ -1,3 +1,7 @@
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
 
 /* Logo */
 .logo{
@@ -23,6 +27,12 @@
 }
 
 /* Category */
+/* nav-bar for mobile and tablet max-width:768px */
+@media screen and (max-width: 900px) {
+    .navbar3 ul {
+        width: 400px;
+    }
+}
 .navbar3 .active{
     margin-left: 95px;
 }
@@ -47,6 +57,10 @@
 .navbar3 .ddnav3 a{
     color: #d14352;
     font-weight: bolder;
+}
+
+.navbar3 ul.nav-tabs li.active a{
+    cursor: pointer;
 }
 
 .btn{
@@ -88,6 +102,7 @@
   .ddnav3:hover .dropdown-menu {display: block;}
 
 
+
 /*Products*/
 
 .products .panel-default{
@@ -113,7 +128,14 @@
     font-size: 35px; 
     color: #d14352;
 }
-
+/* Sale product */
+p mark.markSale{
+    color: goldenrod;
+    background-color: black;
+}
+p del.delPrice{
+    color: black;
+}
 
 /*Footer*/
 footer .ftlinks li a{
