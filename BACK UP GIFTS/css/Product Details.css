@@ -59,7 +59,7 @@ html {
     cursor: pointer;
 }
 
-.btn{
+.nav2 .btn{
     border-radius: 30px;
     font-weight: bold;
     border-style: 5px double;
@@ -170,6 +170,14 @@ h5.Htext{
 ul.textlist li{
     margin-left: 30px;
 }
+/* Sale product */
+mark.markSale{
+    color: goldenrod;
+    background-color: black;
+}
+del.delPrice{
+    color: red;
+}
 
 /* ADD TO FAVORITE, CART, BUY BUTTON */
 /* For Tablet and mobile */
@@ -220,4 +228,27 @@ ul.textlist li{
 /*Footer*/
 footer .ftlinks li a{
     color: white;
+}
+
+/* SHOW CART TABLE */
+
+.show-cart li {
+    display: flex;
+}
+
+.modal-footer .order{
+    background-color: royalblue;
+}
+button.delete-item{
+    background-color: rgb(182, 74, 74);
+}
+button.minus-item{
+    border-radius: 0px;
+    background-color: white;
+    padding: 0px 20px 0px 10px;
+}
+button.plus-item{
+    border-radius: 0px;
+    background-color: white;
+    padding: 0px 20px 0px 10px;
 }
